@@ -1,0 +1,15 @@
+def magic_fee_finder(how_far_km, price_for_each_km):
+    final_price = how_far_km * price_for_each_km
+    return final_price
+
+if __name__ == "__main__":
+    try:
+        distance_to_go = float(input("Distance (km): "))
+        cost_per_km = float(input("Rate (₱): "))
+    except ValueError:
+        print("Please enter actual numbers.")
+        exit()
+
+    fee = magic_fee_finder(distance_to_go, cost_per_km)
+
+    print(f"Total Delivery Fee: ₱{fee:.2f}")
